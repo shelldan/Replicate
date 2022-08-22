@@ -1,10 +1,10 @@
-// * It's done when all the `<h4>` elements are selected and stored in a single variable.
+var site1 = document.querySelector('.site1') //select the entire parent <div> element
+var site2 = document.querySelector('.site2')
+var site3 = document.querySelector('.site3')
 
-// * It's done when the text of each `<h4>` is set to `blue`, the font size is `30px`, and the text is `bold`.
+site1.children[0].textContent='Site 1';
+//console.log(site1.children[1].children[0]).setAttribute("src","./assets/images/image_1.jpg")//Cannot read property 'setAttribute' of null error occurs when trying to call the setAttribute method on a null value
+site1.children[1].children[0].setAttribute("src","./assets/images/image_1.jpg")
+site1.children[1].children[0].setAttribute("alt","man working")
+site1.children[1].children[0].setAttribute("style","padding: 10px")
 
-// * It's done when the padding to the left of the title is set to `10px` and the margin is set to `0`.
-
-var h4Elements = document.querySelectorAll('h4');
-console.log(h4Elements);
-
-h4Elements.setAttribute("style","color:blue; font-size: 30px, font-weight: bold; padding-left: 10px; margin: 0;");
