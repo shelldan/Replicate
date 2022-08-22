@@ -1,20 +1,20 @@
-function keydownAction(event) {
-  // The key property holds the value of the key press
+var key = document.getElementById("key")
+var code = document.getElementById("code")
+var status = document.getElementById("status")
+
+function keydownAction (event){
   var keyPress = event.key;
-  // The code property holds the key's code 
   var keyCode = event.code;
-  // Updates content on page
-  document.querySelector("#key").textContent = keyPress;
-  document.querySelector("#code").textContent = keyCode;
-  document.querySelector("#status").textContent = "KEYDOWN Event";
+  key.textContent = keyPress;
+  code.textContent = keyCode;
+  document.getElementById("status").textContent = "Keydown Event";
   console.log(event);
 }
 
-function keyupAction() {
-  // Updates event to KEYUP Event when key is released
-  document.querySelector("#status").innerHTML = "KEYUP Event";
+function keyupAction (event){
+  document.getElementById("status").innerHTML = "KEYUP Event"
 }
-// Adds listener for keydown event
-document.addEventListener("keydown", keydownAction); //keydown arrow
-// Adds listener for keyup event
-document.addEventListener("keyup", keyupAction); //keyup arrow 
+
+document.addEventListener("keydown",keydownAction);
+
+document.addEventListener("keyup", keyupAction);
